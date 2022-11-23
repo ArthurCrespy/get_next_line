@@ -6,10 +6,9 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:16 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/15 09:12:17 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/11/23 12:49:50 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
