@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="get_next_line" targetName="get_next_line" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bc74539-33b7-4ce4-b866-c754b7fb366f" name="Changes" comment="" />
+    <list default="true" id="7bc74539-33b7-4ce4-b866-c754b7fb366f" name="Changes" comment="Upload get_next_line and his utils">
+      <change afterPath="$PROJECT_DIR$/tests/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/get_next_line_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gnlTester/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/files/gnlTester/Makefile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +35,17 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="2.4" />
   </component>
   <component name="ProjectId" id="2HiOmybhnKHayKqWu1vOxq8Vw8r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,9 +60,23 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true"
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/mnt/nfs/homes/acrespy/42/42Cursus/42Projets/get_next_line",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="get_next_line" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="get_next_line" TARGET_NAME="get_next_line" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="get_next_line" RUN_TARGET_NAME="get_next_line">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,8 +85,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668764600218</updated>
-      <workItem from="1668764608531" duration="2000" />
+      <workItem from="1668764608531" duration="265000" />
+      <workItem from="1668764989993" duration="2702000" />
+      <workItem from="1669115129607" duration="7473000" />
+      <workItem from="1669194525157" duration="6535000" />
     </task>
+    <task id="LOCAL-00001" summary="Add subject">
+      <created>1668764801840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668764801840</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add xml Clion config files">
+      <created>1668764821964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668764821964</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add get next line and his utils file">
+      <created>1668764850037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668764850037</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add get next line header">
+      <created>1668764860680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668764860680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,5 +134,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add subject" />
+    <MESSAGE value="Add xml Clion config files" />
+    <MESSAGE value="Add get next line and his utils file" />
+    <MESSAGE value="Add get next line header" />
+    <MESSAGE value="Upload get_next_line and his utils" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload get_next_line and his utils" />
   </component>
 </project>
