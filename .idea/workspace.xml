@@ -17,15 +17,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bc74539-33b7-4ce4-b866-c754b7fb366f" name="Changes" comment="Upload get_next_line and his utils">
-      <change afterPath="$PROJECT_DIR$/tests/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+    <list default="true" id="7bc74539-33b7-4ce4-b866-c754b7fb366f" name="Changes" comment="Modify prototypes and functions names + rearrange file">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/get_next_line_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/files/get_next_line_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gnlTester/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/files/gnlTester/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +37,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
@@ -50,6 +48,7 @@
   <component name="ProjectId" id="2HiOmybhnKHayKqWu1vOxq8Vw8r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -61,8 +60,11 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/mnt/nfs/homes/acrespy/42/42Cursus/42Projets/get_next_line",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "last_opened_file_path": "/mnt/nfs/homes/acrespy/42/42Cursus/42Projets",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "structure.view.defaults.are.configured": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -71,6 +73,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="get_next_line" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="get_next_line" TARGET_NAME="get_next_line" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="get_next_line" RUN_TARGET_NAME="get_next_line">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -88,7 +95,11 @@
       <workItem from="1668764608531" duration="265000" />
       <workItem from="1668764989993" duration="2702000" />
       <workItem from="1669115129607" duration="7473000" />
-      <workItem from="1669194525157" duration="6535000" />
+      <workItem from="1669194525157" duration="11424000" />
+      <workItem from="1669281375938" duration="2211000" />
+      <workItem from="1669311998283" duration="634000" />
+      <workItem from="1669318429630" duration="599000" />
+      <workItem from="1669369537167" duration="2854000" />
     </task>
     <task id="LOCAL-00001" summary="Add subject">
       <created>1668764801840</created>
@@ -118,7 +129,63 @@
       <option name="project" value="LOCAL" />
       <updated>1668764860680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Upload get_next_line and his utils">
+      <created>1669202605368</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669202605368</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Upload get_next_line header">
+      <created>1669202616429</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669202616429</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add test file">
+      <created>1669202736806</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669202736806</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add xml Clion config files">
+      <created>1669202746543</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669202746543</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix Norminette issues">
+      <created>1669204670947</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669204670948</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Rename prototype of ft_free">
+      <created>1669372302678</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669372302678</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Rearrange prototypes and add missings">
+      <created>1669372338581</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669372338581</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Modify prototypes and functions names + rearrange file">
+      <created>1669372389619</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669372389619</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,11 +203,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/files/gnlTester" />
+      <path value="$PROJECT_DIR$/files/gnlkiller" />
+    </ignored-roots>
     <MESSAGE value="Add subject" />
-    <MESSAGE value="Add xml Clion config files" />
     <MESSAGE value="Add get next line and his utils file" />
     <MESSAGE value="Add get next line header" />
     <MESSAGE value="Upload get_next_line and his utils" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload get_next_line and his utils" />
+    <MESSAGE value="Upload get_next_line header" />
+    <MESSAGE value="Add test file" />
+    <MESSAGE value="Add xml Clion config files" />
+    <MESSAGE value="Fix Norminette issues" />
+    <MESSAGE value="Rename prototype of ft_free" />
+    <MESSAGE value="Rearrange prototypes and add missings" />
+    <MESSAGE value="Modify prototypes and functions names + rearrange file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify prototypes and functions names + rearrange file" />
   </component>
 </project>
