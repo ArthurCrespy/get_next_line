@@ -6,18 +6,18 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:07 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/15 09:12:10 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/11/24 14:18:51 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_free(char *buffer, char *buf)
+char	*ft_free(char *result, char *buffer)
 {
 	char	*temp;
 
-	temp = ft_strjoin(buffer, buf);
-	free(buffer);
+	temp = ft_strjoin(result, buffer);
+	free(result);
 	return (temp);
 }
 
