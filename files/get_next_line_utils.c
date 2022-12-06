@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -51,39 +51,41 @@ void	ft_bzero(void *s, size_t n)
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*res;
+	void	*result;
 
-	res = malloc(size * nmemb);
-	if (!res)
+	if ((size != 0 && nmemb != 0) && ((nmemb * size) / size != nmemb))
 		return (NULL);
-	ft_bzero(res, size * nmemb);
-	return (res);
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	result = malloc(nmemb * size);
+	if (result == NULL)
+		return (NULL);
+	ft_bzero(result, (nmemb * size));
+	return (result);
 }
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		size;
-	char	*res;
-	int		i;
-	int		j;
+	int		i_s1;
+	int		i_s2;
+	char	*result;
 
-	i = 0;
-	size = ft_strlen(s1) + ft_strlen(s2);
-	res = malloc(sizeof(char) * (size + 1));
-	if (!res || !s1 || !s2)
-		return (NULL);
-	while (s1[i] != '\0')
+	i_s1 = 0;
+	i_s2 = 0;
+	if (s1 == 0x00 || s2 == 0x00)
+		return (0x00);
+	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (result == NULL)
+		return (0x00);
+	while (i_s1 < (int)ft_strlen(s1))
 	{
-		res[i] = s1[i];
-		i++;
+		result[i_s1] = s1[i_s1];
+		i_s1++;
 	}
-	j = 0;
-	while (s2[j] != '\0')
+	while (i_s2 < (int)ft_strlen(s2))
 	{
-		res[i] = s2[j];
-		i++;
-		j++;
+		result[i_s1 + i_s2] = s2[i_s2];
+		i_s2++;
 	}
-	res[size] = '\0';
-	return (res);
+	result[i_s1 + i_s2] = 0x00;
+	return (result);
 }
