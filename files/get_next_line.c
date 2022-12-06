@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 20
+#endif
+
 #include "get_next_line.h"
 
 char	*ft_free(char *result, char *buffer)
