@@ -23,7 +23,7 @@
 # include <fcntl.h>
 
 char	*get_next_line(int fd);
-char	*read_file(int fd, char *result);
+char	*ft_read(int fd, char *result);
 char	*ft_line(char *buffer);
 char	*ft_next(char *buffer);
 char	*ft_free(char *result, char *buffer);
