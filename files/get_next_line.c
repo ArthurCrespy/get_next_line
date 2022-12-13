@@ -72,7 +72,7 @@ char	*ft_line(char *buffer)
 	return (line);
 }
 
-char	*read_file(int fd, char *result)
+char	*ft_read(int fd, char *result)
 {
 	char	*buffer;
 	int		byte_read;
@@ -107,7 +107,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buffer = read_file(fd, buffer);
+	buffer = ft_read(fd, buffer);
 	if (!buffer)
 		return (NULL);
 	line = ft_line(buffer);
