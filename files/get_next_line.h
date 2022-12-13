@@ -6,12 +6,16 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:16 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/24 14:18:54 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/12/09 14:55:31 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 20
+# endif
 
 # include <stdio.h>
 # include <stdlib.h>
