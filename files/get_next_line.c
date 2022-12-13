@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:07 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/24 14:18:51 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/12/13 17:26:17 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_next(char *buffer)
 		return (NULL);
 	}
 	line = ft_calloc((ft_strlen(buffer) - i + 1), sizeof(char));
+	if (!line)
+		return (NULL);
 	i++;
 	j = 0;
 	while (buffer[i])
@@ -57,6 +59,8 @@ char	*ft_line(char *buffer)
 	if (!buffer[i])
 		return (NULL);
 	line = ft_calloc(ft_strlen(buffer) + 1, sizeof(char));
+	if (!line)
+		return (NULL);
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
 	{
@@ -76,6 +80,8 @@ char	*read_file(int fd, char *result)
 	if (!result)
 		result = ft_calloc(1, 1);
 	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	if (!buffer)
+		return (NULL);
 	byte_read = 1;
 	while (byte_read > 0)
 	{
