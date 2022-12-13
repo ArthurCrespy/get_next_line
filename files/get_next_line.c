@@ -32,6 +32,7 @@ char	*ft_next(char *buffer)
 	char	*line;
 
 	i = 0;
+	j = 0;
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
 	if (!buffer[i])
@@ -43,7 +44,6 @@ char	*ft_next(char *buffer)
 	if (!line)
 		return (NULL);
 	i++;
-	j = 0;
 	while (buffer[i])
 		line[j++] = buffer[i++];
 	free(buffer);
