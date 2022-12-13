@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:02 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/24 14:18:49 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/12/13 17:24:17 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(result, (nmemb * size));
 	return (result);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i_s1;
@@ -71,11 +72,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i_s1 = 0;
 	i_s2 = 0;
-	if (s1 == 0x00 || s2 == 0x00)
-		return (0x00);
+	if (!s1 || !s2)
+		return (NULL);
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (result == NULL)
-		return (0x00);
+		return (NULL);
 	while (i_s1 < (int)ft_strlen(s1))
 	{
 		result[i_s1] = s1[i_s1];
@@ -86,6 +87,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		result[i_s1 + i_s2] = s2[i_s2];
 		i_s2++;
 	}
-	result[i_s1 + i_s2] = 0x00;
+	result[i_s1 + i_s2] = '\0';
 	return (result);
 }
