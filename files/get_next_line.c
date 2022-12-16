@@ -12,26 +12,40 @@
 
 #include "get_next_line.h"
 
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str && str[i])
+		i++;
+	return (i);
+}
+
 char	*ft_line(int fd, char *buffer)
 {
 	int		nb_bytes;
 	char	*result;
 
-	if (!buffer)
-		result = (ft_calloc(1, 1));
+	nb_bytes = 1;
 	result = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	while (!ft_fromchr(result, '\n') && nb_bytes > 0)
+	while (!ft_fromchr(result, '\n'))
 	{
 		nb_bytes = read(fd, result, BUFFER_SIZE);
-		if (nb_bytes == -1)
+		if (nb_bytes > 0)
 		{
-			free(result);
-			return (NULL);
+			if (nb_bytes == -1)
+			{
+				free(result);
+				return (NULL);
+			}
+			result[nb_bytes] = '\0';
+			buffer = ft_strjoin(buffer, result);
 		}
-		result[nb_bytes] = '\0';
-		buffer = ft_strjoin(buffer, result);
+		else
+			break ;
 	}
 	free(result);
 	return (buffer);
