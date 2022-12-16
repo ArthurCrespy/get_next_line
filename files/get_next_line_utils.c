@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:02 by acrespy           #+#    #+#             */
-/*   Updated: 2022/12/13 17:24:17 by acrespy          ###   ########.fr       */
+/*   Updated: 2022/12/16 19:53:31 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,48 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (str && str[i])
 		i++;
 	return (i);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_untilchr(const char *s, int c)
 {
-	char	*str;
+	int		i;
+	char	*result;
 
-	str = (char *)s;
-	while (*str != c && *str != '\0')
-		str++;
-	if (*str == c)
-		return (str);
+	i = 0;
+	if (!s || s[i] == 0)
+		return (NULL);
+	result = malloc((ft_strlen(s) - (ft_strlen(ft_fromchr(s, c)))) + 1000);
+	while (s[i] != c && s[i] != '\0')
+	{
+		result[i] = s[i];
+		i++;
+	}
+	result[i] = '\0';
+	if (s[i] == c)
+		return (result);
 	else
 		return (NULL);
 }
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_fromchr(const char *s, int c)
 {
 	char	*str;
-	size_t	i;
 
+	if (!s)
+		return (NULL);
 	str = (char *)s;
-	i = 0;
-	while (i < n)
+	while (*str != c && *str != '\0')
+		str++;
+	if (*str == c)
 	{
-		str[i] = '\0';
-		i++;
+		str++;
+		return (str);
 	}
+	else
+		return (NULL);
 }
 
 void	*ft_calloc(size_t nmemb, size_t size)
@@ -60,7 +72,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	result = malloc(nmemb * size);
 	if (result == NULL)
 		return (NULL);
-	ft_bzero(result, (nmemb * size));
 	return (result);
 }
 
@@ -72,8 +83,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i_s1 = 0;
 	i_s2 = 0;
-	if (!s1 || !s2)
-		return (NULL);
+	if (!s1)
+		s1 = ft_calloc(1, 1);
+	if (!s2)
+		s2 = ft_calloc(1, 1);
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (result == NULL)
 		return (NULL);
