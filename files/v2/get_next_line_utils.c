@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_v2.h"
 
 char	*ft_untilchr(const char *s, int c)
 {
@@ -20,14 +20,15 @@ char	*ft_untilchr(const char *s, int c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	result = malloc(ft_strlen(s) - (ft_strlen(ft_fromchr(s, c))));
+	result = ft_calloc(ft_strlen(s) - (ft_strlen(ft_fromchr(s, c))) + 2, 1);
 	while (s[i] != c && s[i] != '\0')
 	{
 		result[i] = s[i];
 		i++;
 	}
-	result[i] = '\0';
-	if (s[i] == c)
+	result[i] = '\n';
+	result[++i] = '\0';
+	if (s[--i] == c)
 		return (result);
 	else
 		return (NULL);
@@ -37,7 +38,7 @@ char	*ft_fromchr(const char *s, int c)
 {
 	char	*str;
 
-	if (!s)
+	if (!s || *s == 0)
 		return (NULL);
 	str = (char *)s;
 	while (*str != c && *str != '\0')
@@ -88,6 +89,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i_s1 = 0;
 	i_s2 = 0;
+//	if (!s1)
+//		return ((char *)s2);
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!result)
 		return (NULL);
@@ -101,6 +104,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		result[i_s1 + i_s2] = s2[i_s2];
 		i_s2++;
 	}
+	if (s1)
+		free((char *)s1);
 	result[i_s1 + i_s2] = '\0';
 	return (result);
 }
