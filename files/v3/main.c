@@ -20,7 +20,7 @@ int	main(void)
 
 	i = 1;
 	fd = open("/mnt/nfs/homes/acrespy/42/42Cursus/42Projets/get_next_line/tests/test3", O_RDONLY);
-	while (i <= 100)
+	while (i <= 10)
 	{
 		result = get_next_line(3);
 		printf("%d: %s\n", i, result);

@@ -25,7 +25,7 @@ char    *ft_join(char *buffer, char *temp)
 char	*ft_read(int fd)
 {
 	int 	    nb_bytes;
-	char	    temp[BUFFER_SIZE + 1];
+	char	    *temp;
 	static char	buffer[BUFFER_SIZE + 1];
 
 	nb_bytes = 1;
