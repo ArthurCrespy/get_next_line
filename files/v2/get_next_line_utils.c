@@ -52,32 +52,24 @@ char	*ft_fromchr(const char *s, int c)
 		return (NULL);
 }
 
-void	ft_bzero(void *s, size_t n)
+char    *ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	char	*str;
+	size_t  i;
+	char    *result;
 
 	i = 0;
-	str = s;
-	while (i < n && n > 0)
-	{
-		str[i] = 0;
-		i++;
-	}
-}
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*result;
-
 	if ((size != 0 && nmemb != 0) && ((nmemb * size) / size != nmemb))
 		return (NULL);
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	result = malloc(nmemb * size);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
-	ft_bzero(result, (nmemb * size));
+	while (i < nmemb * size)
+	{
+		result[i] = '\0';
+		i++;
+	}
 	return (result);
 }
 
@@ -87,25 +79,26 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i_s2;
 	char	*result;
 
+
 	i_s1 = 0;
 	i_s2 = 0;
-//	if (!s1)
-//		return ((char *)s2);
+
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!result)
 		return (NULL);
-	while (s1 && i_s1 < (int)ft_strlen(s1))
+	if (s1)
 	{
-		result[i_s1] = s1[i_s1];
-		i_s1++;
+		while (s1[i_s1])
+		{
+			result[i_s1] = s1[i_s1];
+			i_s1++;
+		}
 	}
-	while (i_s2 < (int)ft_strlen(s2))
+	while (s2[i_s2])
 	{
 		result[i_s1 + i_s2] = s2[i_s2];
 		i_s2++;
 	}
-	if (s1)
-		free((char *)s1);
 	result[i_s1 + i_s2] = '\0';
 	return (result);
 }

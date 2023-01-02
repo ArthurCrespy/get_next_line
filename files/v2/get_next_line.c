@@ -12,14 +12,14 @@
 
 #include "get_next_line_v2.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (!str)
-		return (i);
-	while (str[i] && str[i] != '\0')
+	if (!str || str == NULL)
+		return (0);
+	while (str[i])
 		i++;
 	return (i);
 }
@@ -44,10 +44,9 @@ char	*ft_strdup(const char *s)
 	return (result);
 }
 
-char	*ft_line(int fd, char *buffer)
+char	*ft_line(int fd, char **buffer)
 {
 	long		nb_bytes;
-	//char    *temp;
 	char	*result;
 
 	nb_bytes = 1;
@@ -60,7 +59,7 @@ char	*ft_line(int fd, char *buffer)
 		if (nb_bytes > 0)
 		{
 			result[nb_bytes] = '\0';
-			buffer = ft_strjoin(buffer, result);
+			*buffer = ft_strjoin(*buffer, result);
 		}
 		else if (nb_bytes < 0)
 		{
@@ -68,12 +67,10 @@ char	*ft_line(int fd, char *buffer)
 			return (NULL);
 		}
 		else
-		{
-			free(result);
 			break;
-		}
 	}
-	return (buffer);
+	free(result);
+	return (*buffer);
 }
 
 char	*get_next_line(int fd)
@@ -84,7 +81,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	line = ft_line(fd, buffer);
+	line = ft_line(fd, &buffer);
 	result = ft_untilchr(line, '\n');
 	buffer = ft_fromchr(line, '\n');
 	free(line);
