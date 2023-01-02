@@ -23,12 +23,8 @@
 # include <fcntl.h>
 
 char	*get_next_line(int fd);
-char    *ft_line(int fd, char *buffer);
+char	*ft_strchr(const char *str, int c);
+char    *ft_read(int fd);
 size_t	ft_strlen(const char *str);
-char	*ft_fromchr(const char *s, int c);
-char	*ft_untilchr(const char *s, int c);
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strdup(const char *s);
 #endif
