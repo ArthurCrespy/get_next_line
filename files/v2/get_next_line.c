@@ -68,9 +68,11 @@ char	*ft_line(int fd, char *buffer)
 			return (NULL);
 		}
 		else
-			break ;
+		{
+			free(result);
+			break;
+		}
 	}
-	free(result);
 	return (buffer);
 }
 
@@ -80,7 +82,7 @@ char	*get_next_line(int fd)
 	char        *line;
 	static char	*buffer;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = ft_line(fd, buffer);
 	result = ft_untilchr(line, '\n');
