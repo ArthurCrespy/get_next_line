@@ -6,13 +6,13 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:07 by acrespy           #+#    #+#             */
-/*   Updated: 2022/12/16 19:54:15 by acrespy          ###   ########.fr       */
+/*   Updated: 2023/01/04 14:57:45 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char    *ft_join(char *buffer, char *temp)
+char	*ft_join(char *buffer, char *temp)
 {
 	char	*result;
 
@@ -21,11 +21,10 @@ char    *ft_join(char *buffer, char *temp)
 	return (result);
 }
 
-
 char	*ft_read(int fd)
 {
-	int 	    nb_bytes;
-	char	    *temp;
+	int			nb_bytes;
+	char		*temp;
 	static char	buffer[BUFFER_SIZE + 1];
 
 	nb_bytes = 1;
@@ -42,11 +41,10 @@ char	*ft_read(int fd)
 
 char	*get_next_line(int fd)
 {
-	char        *line;
+	char	*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = ft_read(fd);
-//	printf(">%s", line);
 	return (line);
 }
