@@ -6,38 +6,20 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:02 by acrespy           #+#    #+#             */
-/*   Updated: 2022/11/15 09:12:13 by acrespy          ###   ########.fr       */
+/*   Updated: 2023/01/04 15:07:11 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_strlen(const char *str)
 {
-	int		sizetotal;
-	char	*res;
-	int		i;
-	int		j;
+	int	i;
 
 	i = 0;
-	sizetotal = ft_strlen(s1) + ft_strlen(s2);
-	res = malloc(sizeof(char) * (sizetotal + 1));
-	if (!res || !s1 || !s2)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		res[i] = s1[i];
+	while (str[i])
 		i++;
-	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		res[i] = s2[j];
-		i++;
-		j++;
-	}
-	res[sizetotal] = '\0';
-	return (res);
+	return (i);
 }
 
 char	*ft_strchr(const char *string, int c)
@@ -53,37 +35,51 @@ char	*ft_strchr(const char *string, int c)
 		return (NULL);
 }
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*str;
 	size_t	i;
+	char	*result;
 
-	str = (char *)s;
 	i = 0;
-	while (i < n)
+	if ((size != 0 && nmemb != 0) && ((nmemb * size) / size != nmemb))
+		return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	result = malloc(nmemb * size);
+	if (!result)
+		return (NULL);
+	while (i < nmemb * size)
 	{
-		str[i] = '\0';
+		result[i] = '\0';
 		i++;
 	}
+	return (result);
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
+	int		i_s1;
+	int		i_s2;
+	char	*result;
 
-	res = malloc(size * nmemb);
-	if (!res)
+	i_s1 = 0;
+	i_s2 = 0;
+	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (!result)
 		return (NULL);
-	ft_bzero(res, size * nmemb);
-	return (res);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (s1)
+	{
+		while (s1[i_s1])
+		{
+			result[i_s1] = s1[i_s1];
+			i_s1++;
+		}
+	}
+	while (s2[i_s2])
+	{
+		result[i_s1 + i_s2] = s2[i_s2];
+		i_s2++;
+	}
+	result[i_s1 + i_s2] = '\0';
+	return (result);
 }
