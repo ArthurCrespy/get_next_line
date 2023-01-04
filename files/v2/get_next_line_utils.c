@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_v2.h"
+#include "get_next_line.h"
 
 char	*ft_untilchr(const char *s, int c)
 {
