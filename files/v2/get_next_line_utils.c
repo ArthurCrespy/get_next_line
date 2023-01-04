@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:02 by acrespy           #+#    #+#             */
-/*   Updated: 2022/12/16 23:09:59 by acrespy          ###   ########.fr       */
+/*   Updated: 2023/01/04 15:01:48 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,30 @@ char	*ft_untilchr(const char *s, int c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	result = ft_calloc(ft_strlen(s) - (ft_strlen(ft_fromchr(s, c))) + 2, 1);
+	result = ft_calloc(ft_strlen(s) - (ft_strlen(ft_fromchr(s, c))) + 1, 1);
+	if (!result)
+		return (NULL);
 	while (s[i] != c && s[i] != '\0')
 	{
 		result[i] = s[i];
 		i++;
 	}
-	result[i] = '\n';
-	result[++i] = '\0';
-	if (s[--i] == c)
+	if (s[i] == c)
+	{
+		result[i] = s[i];
+		i++;
+		result[i] = '\0';
 		return (result);
+	}
 	else
-		return (NULL);
+		return ((char *)s);
 }
 
 char	*ft_fromchr(const char *s, int c)
 {
 	char	*str;
 
-	if (!s || *s == 0)
+	if (!s)
 		return (NULL);
 	str = (char *)s;
 	while (*str != c && *str != '\0')
