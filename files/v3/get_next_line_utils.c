@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:02 by acrespy           #+#    #+#             */
-/*   Updated: 2022/12/16 23:09:59 by acrespy          ###   ########.fr       */
+/*   Updated: 2023/01/04 14:58:58 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ char	*ft_strchr(const char *str, int c)
 		return (NULL);
 }
 
-
-char    *ft_calloc(size_t nmemb, size_t size)
+char	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t  i;
-	char    *result;
+	size_t		i;
+	char		*result;
 
 	i = 0;
 	if ((size != 0 && nmemb != 0) && ((nmemb * size) / size != nmemb))
@@ -65,8 +64,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i_s1 = 0;
 	i_s2 = 0;
-//	if (!s1)
-//		return ((char *)s2);
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!result)
 		return (NULL);
@@ -80,8 +77,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		result[i_s1 + i_s2] = s2[i_s2];
 		i_s2++;
 	}
-//	if (s1)
-//		free((char *)s1);
 	result[i_s1 + i_s2] = '\0';
 	return (result);
 }
