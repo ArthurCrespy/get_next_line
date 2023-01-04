@@ -52,10 +52,10 @@ char	*ft_fromchr(const char *s, int c)
 		return (NULL);
 }
 
-char    *ft_calloc(size_t nmemb, size_t size)
+char	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t  i;
-	char    *result;
+	size_t		i;
+	char		*result;
 
 	i = 0;
 	if ((size != 0 && nmemb != 0) && ((nmemb * size) / size != nmemb))
@@ -79,10 +79,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i_s2;
 	char	*result;
 
-
 	i_s1 = 0;
 	i_s2 = 0;
-
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!result)
 		return (NULL);
