@@ -6,7 +6,7 @@
 /*   By: acrespy <acrespy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:12:16 by acrespy           #+#    #+#             */
-/*   Updated: 2022/12/16 23:10:15 by acrespy          ###   ########.fr       */
+/*   Updated: 2023/01/04 15:04:48 by acrespy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # include <fcntl.h>
 
 char	*get_next_line(int fd);
-char    *ft_line(int fd, char **buffer);
-int	ft_strlen(const char *str);
+char	*ft_line(int fd, char **buffer);
+int		ft_strlen(const char *str);
 char	*ft_fromchr(const char *s, int c);
 char	*ft_untilchr(const char *s, int c);
 void	ft_bzero(void *s, size_t n);
