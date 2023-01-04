@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_v3.h"
+#include "get_next_line.h"
 
 int	main(void)
 {
