@@ -19,7 +19,7 @@ int	main(void)
 	char	*result;
 
 	i = 1;
-	fd = open("/mnt/nfs/homes/acrespy/42/42Cursus/42Projets/get_next_line/tests/test3", O_RDONLY);
+	fd = open("../../tests/test3", O_RDONLY);
 	while (i <= 10)
 	{
 		result = get_next_line(fd);
