@@ -79,12 +79,13 @@ char	*read_file(int fd, char *result)
 	if (!buffer)
 		return (NULL);
 	byte_read = 1;
-	while (byte_read >= 0)
+	while (byte_read > 0)
 	{
 		byte_read = read(fd, buffer, BUFFER_SIZE);
 		if (byte_read < 0)
 		{
 			free(buffer);
+			free(result);
 			return (NULL);
 		}
 		buffer[byte_read] = '\0';
