@@ -14,7 +14,7 @@
     <a href="https://github.com/ArthurCrespy/get_next_line/search?l=c"> <img alt="Language: C" src="https://img.shields.io/badge/language-C-orange"></a>
     <a href="https://github.com/ArthurCrespy/get_next_line"> <img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/ArthurCrespy/get_next_line"></a>
     <a href="https://github.com/ArthurCrespy/get_next_line/commits"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ArthurCrespy/get_next_line?color=yellow"></a>
-    <a href="https://github.com/ArthurCrespy/get_next_line/watchers"> <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/ArthurCrespy/get_next_line?color=pink"></a>
+    <a href="https://github.com/ArthurCrespy/get_next_line/watchers"> <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/ArthurCrespy/get_next_line?color=ff69b4""></a>
     <a href="https://projects.intra.42.fr/42cursus-get_next_line/acrespy"> <img alt="Result: NA/100" src="https://img.shields.io/badge/result-NA/100-brightgreen"></a>
 
 </p>
