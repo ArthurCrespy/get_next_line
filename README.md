@@ -38,9 +38,9 @@ To clone and run this project, you'll need [Git](https://git-scm.com) and [Clang
 
 ```bash
 # Clone this repository via HTTPS
-$ git clone https://github.com/ArthurCrespy/ft_printf
+$ git clone https://github.com/ArthurCrespy/get_next_line
 # OR clone this repository via SSH
-$ git clone git@github.com:ArthurCrespy/ft_printf.git
+$ git clone git@github.com:ArthurCrespy/get_next_line.git
 
 # Go into the repository
 $ cd get_next_line
